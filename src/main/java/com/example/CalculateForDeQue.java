@@ -15,17 +15,17 @@ public class CalculateForDeQue {
 	 int z=0;
 	 while (iterator.hasNext()) {
 		 SearchMap.nextLineSM [z]=(String) iterator.next();
-		Processor="обработка заявки "+SearchMap.nextLineSM [z]+" и внесение ее в базу данных";
+		 Processor="обработка заявки "+SearchMap.nextLineSM [z]+" и внесение ее в базу данных";
 				  product = new Product(SearchMap.nextLineSM [z]);
 				  ProductDB.insert(product);
 				   System.out.println(Processor);
 		   ArrDeQue.ADQ.pollFirst();
 		   z++;
-			}
-		
+			
+	 }
 	 Processor="обработка завершена";
 	 System.out.println(Processor);
-    try {
+   try {
        App.main();
 
 		//App.J1_jsp(App.appMapSearchFile, App.appMap_J1_J2);

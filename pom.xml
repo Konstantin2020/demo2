@@ -22,6 +22,25 @@
       <maven.compiler.target>1.8</maven.compiler.target>
       <h2.version>1.4.200</h2.version>
     </properties>
+   
+   <!-- distributionManagement>
+    <repository>
+      <uniqueVersion>false</uniqueVersion>
+      <id>corp1</id>
+      <name>Corporate Repository</name>
+      <url>scp://localhost:8081/pts14/repo</url>
+      <layout>default</layout>
+    </repository>
+    <snapshotRepository>
+      <uniqueVersion>true</uniqueVersion>
+      <id>propSnap</id>
+      <name>Propellors Snapshots</name>
+      <url>sftp://localhost:8081/pts14/repo2</url>
+      <layout>legacy</layout>
+    </snapshotRepository>
+  </distributionManagement>
+ 
+ -->
     
 <dependencies>
 <!-- https://mvnrepository.com/artifact/org.apache.tomcat.maven/tomcat-maven-plugin -->
@@ -103,14 +122,23 @@
     <artifactId>json</artifactId>
     <version>20190722</version>
 </dependency>
-    
-    
   </dependencies>
+
 
   <build>
     <finalName>pts14</finalName>
     <pluginManagement><!-- lock down plugins versions to avoid using Maven defaults (may be moved to parent pom) -->
       <plugins>
+		 <plugin>
+		    <groupId>org.apache.tomcat.maven</groupId>
+		    <artifactId>tomcat7-maven-plugin</artifactId>
+		    <version>2.2</version>
+		    <configuration>
+		        <server>maven-tomcat-war-deployment-server</server>    
+		        <url>http://localhost:8081/manager/text</url>
+		       <path>/pts14</path>
+		    </configuration>
+		</plugin>  
         <plugin>
           <artifactId>maven-clean-plugin</artifactId>
           <version>3.0.0</version>

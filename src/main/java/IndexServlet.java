@@ -21,6 +21,8 @@ public class IndexServlet extends HttpServlet {
     	request.setAttribute("create_DB_bool", App.create_DB_bool);
     	request.setAttribute("fileSourceName_int", App.fileSourceName_int);
     	request.setAttribute("create_Request_int", App.create_Request_int);
+    	int lengthDeQue=ArrDeQue.ADQ.size();
+        request.setAttribute("lengthDeQue", lengthDeQue);
     	//request.setAttribute("uploadFile_int", App.uploadFile_int);
         getServletContext().getRequestDispatcher("/index.jsp").forward(request, response);
     }

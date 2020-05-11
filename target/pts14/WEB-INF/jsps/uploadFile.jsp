@@ -10,17 +10,18 @@
     <div style="padding:5px; color:red;font-style:italic;">
        ${errorMessage}
     </div>
-    
-    <h2>Выбор архива</h2>
+
  
     <form method="post" action="${pageContext.request.contextPath}/uploadFile"
         enctype="multipart/form-data">
         
-        Выберите архив:
-        <br />
+        <font size="5" color="black" face="Arial">Выберите архив:</font>
+<br>
+<br>
         <input type="file" name="file"  />
-        <br />
-        <input type="submit" value="Загрузить" />
+<br>
+<br>
+        <font size="3" color="black" face="Arial"><input type="submit" value="Загрузить архив" /></font>
     </form>
     
 </body>

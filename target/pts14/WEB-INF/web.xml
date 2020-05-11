@@ -35,7 +35,15 @@
          <url-pattern>/main</url-pattern>
      </servlet-mapping>
      
-     
+          <servlet>
+         <servlet-name>EnterToDBServlet</servlet-name>
+         <servlet-class>EnterToDBServlet</servlet-class>
+     </servlet>
+ 
+     <servlet-mapping>
+         <servlet-name>EnterToDBServlet</servlet-name>
+         <url-pattern>/enterToDB</url-pattern>
+     </servlet-mapping>
      
      
      <servlet>

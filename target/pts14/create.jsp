@@ -6,14 +6,16 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Create product</title>
+<title>Ввод заявки</title>
 </head>
 <body>
-<h3>New product</h3>
+
 <form method="post">
-<label>Name</label><br>
-<input name="name"/><br><br>
-<input type="submit" value="Save" />
+<font size="5" color="black" face="Arial"><label>Название заявки</label></font><br>
+<br>
+<input name="name"/>
+<br><br>
+<font size="3" color="black" face="Arial"><input type="submit" value="Внести в очередь" /></font>
 </form>
 </body>
 </html>

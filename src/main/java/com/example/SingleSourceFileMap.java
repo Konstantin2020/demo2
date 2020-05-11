@@ -26,7 +26,7 @@ public class SingleSourceFileMap {
         while ((nextLine = reader.readNext()) != null) {
             if (nextLine != null) {
                 String [] lastLine=nextLine;
-                String nameSourceMark=((String) lastLine[0]);
+                String nameSourceMark=((String) lastLine[0]).toUpperCase();
                 int quantitySourceMark= Integer.parseInt(lastLine[1]);
                 SourceMark sourcemark=new SourceMark(nameSourceMark,quantitySourceMark);
                 ProductDB.insertSourceMark(sourcemark);

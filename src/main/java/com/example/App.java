@@ -171,7 +171,7 @@ public static Map<String,Integer> getMapFromDB() {
  return MapFromDB;
 }
         
-//метод проверки есть ли такая заявка в базе данных 
+//метод проверки есть ли такая заявка в базе данных, если совпадает возвращает true   
 public static boolean isComparison_Name_DB(String a, String [] b) {
         	boolean c = false;
         	LOOP: for(int q=0; q<b.length;q++) {
@@ -182,7 +182,7 @@ public static boolean isComparison_Name_DB(String a, String [] b) {
  return c;
 }	
 
-//метод проверки есть ли такая заявка в очереди        
+//метод проверки есть ли такая заявка в очереди, если совпадает возвращает true       
 public static boolean isComparison_Name_Deque(String a, Deque<String> b) {
         	boolean c = false;
         	LOOP: for(String elem: b) {
